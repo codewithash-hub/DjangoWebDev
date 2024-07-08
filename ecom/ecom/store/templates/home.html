@@ -64,7 +64,7 @@
                                     <!-- Sale badge -->
                                      <div class="badge bg-light text-black position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                                     <!-- Product image-->
-                                    <img class="card-img-top" src="{{ product.image.url }}" alt="..." />
+                                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 55%;"/>
                                     <!-- Product details-->
                                     <div class="card-body p-4">
                                         <div class="text-center">
@@ -78,8 +78,7 @@
                                             </div>
                                             <!-- Product price-->
                                             <strike>R{{ product.price }} </strike>&nbsp;R{{ product.sale_price }}  <br>
-                                            {{ product.description }} <br>
-                                            <i>{{ product.category }} </i>
+                                            {{ product.description }}
                                         </div>
                                     </div>
                                     <!-- Product actions-->
@@ -92,7 +91,7 @@
                             <div class="col mb-5">
                                 <div class="card h-100">
                                     <!-- Product image-->
-                                    <img class="card-img-top" src="{{ product.image.url }}" alt="..." />
+                                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" style="height: 55%;"/>
                                     <!-- Product details-->
                                     <div class="card-body p-4">
                                         <div class="text-center">
@@ -100,8 +99,7 @@
                                             <h5 class="fw-bolder">{{ product.name }}</h5>
                                             <!-- Product price-->
                                             R{{ product.price }} <br>
-                                            {{ product.description }} <br>
-                                            <i>{{ product.category }} </i>
+                                            {{ product.description }}
                                         </div>
                                     </div>
                                     <!-- Product actions-->
