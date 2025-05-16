@@ -3,13 +3,22 @@ from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
+    class Status(models.TextChoices):
+        DRAFT = 'DF', "Draft"
+        PUBLISHED = 'PB', 'Published'
+    
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
-
+    status = models.CharField(
+        max_length=2,
+        choices=Status,
+        default=Status.DRAFT
+    )
+    
     #  Defining a default sort order
     class Meta:
         ordering = ['-publish']
