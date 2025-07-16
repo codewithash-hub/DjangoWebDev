@@ -16,27 +16,27 @@
 
     <form action='{% url 'signup' %}' method='post'>
         {% csrf_token %}
-        <label>Username</label>
+        {% comment %} <label>Username</label> {% endcomment %}
         <input type='text' id='username' name='username' placeholder='Username' Required >
         <br>
 
-        <label>First name</label>
+        {% comment %} <label>First name</label> {% endcomment %}
         <input type='text' id='fname' name='fname' placeholder='First name' Required >
         <br>
 
-        <label>Last name</label>
+        {% comment %} <label>Last name</label> {% endcomment %}
         <input type='text' id='lname' name='lname' placeholder='Last name' Required >
         <br>
 
-        <label>Email Address </label>
+        {% comment %} <label>Email Address </label> {% endcomment %}
         <input type='email' id='email' name='email' placeholder='Email Address' Required >
         <br>
 
-        <label>Password</label>
+        {% comment %} <label>Password</label> {% endcomment %}
         <input type='password' id='pass1' name='pass1' placeholder='Password' Required >
         <br>
 
-        <label>Confirm Password</label>
+        {% comment %} <label>Confirm Password</label> {% endcomment %}
         <input type='password' id='pass2' name='pass2' placeholder='Confirm Password' Required >
         <br>
 

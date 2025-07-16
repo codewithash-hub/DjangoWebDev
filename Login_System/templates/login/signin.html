@@ -2,15 +2,15 @@
 
 {% block title %}SignIn{% endblock %}
 {% block content %}
-    <h3>SignIn</h3>
+    <h1>SignIn</h1>
 
     <form action='{% url 'signin' %}' method='POST'>
         {% csrf_token %}
-        <label>Username</label>
+        {% comment %} <label>Username</label> {% endcomment %}
         <input type='text' id='username' name='username' placeholder='Enter your Username' Required >
         <br>
         
-        <label>Password</label>
+        {% comment %} <label>Password</label> {% endcomment %}
         <input type='password' id='pass1' name='pass1' placeholder='Enter your Password' Required >
         <br>
         
