@@ -84,3 +84,7 @@ a:hover {
     background-color: #50C9CE;
     transition: .2s ease-in;
 }
+
+.landWrapper {
+    margin-top: 50%;
+}

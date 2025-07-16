@@ -12,17 +12,20 @@
         </div>
     {% endfor %}
 
-    <h1>Welcome to the home page</h1>
+    <div class="landWrapper">
+        <h1>Welcome to the home page</h1>
     
-    {% if user.is_authenticated %}
-        <h3>Hello {{ fname }}</h3>
-        <h4>You're successful login</h4>
-        <button type='submit'><a href='/signout'>SignOut</a></botton> 
-    {% else %}
-        <center>
-            <a href='/signup'>SignUp</a>
-            <a href='/signin'>SignIn</a>
-        </center>
-    {% endif %}     
+        {% if user.is_authenticated %}
+            <h3>Hello {{ fname }}</h3>
+            <h4>You're successful login</h4>
+            <button type='submit'><a href='/signout'>SignOut</a></botton> 
+        {% else %}
+            <center>
+                <a href='/signup'>SignUp</a>
+                <a href='/signin'>SignIn</a>
+            </center>
+        {% endif %} 
+    </div>
+        
     
 {% endblock content %}
